@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Moovit Auto-Login",
+  "version": "1.0",
+  "description": "Automates login for Moovit (VIT) with multi-account support.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://moovit.vit.ac.in/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Moovit Auto-Login Settings"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://moovit.vit.ac.in/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

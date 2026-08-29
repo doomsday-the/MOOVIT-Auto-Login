@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moovit Auto-Login</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Moovit Login</h1>
+      <p>Manage Auto-Login Accounts</p>
+    </header>
+
+    <div class="account-section">
+      <div class="section-header">
+        <h2>Saved Accounts</h2>
+      </div>
+      <ul id="account-list" class="account-list">
+        <!-- Accounts will be injected here via JS -->
+      </ul>
+      <div id="no-accounts-msg" class="empty-state">No accounts saved yet.</div>
+    </div>
+
+    <hr>
+
+    <div class="add-account-section">
+      <h2>Add New Account</h2>
+      <form id="add-account-form">
+        <div class="input-group">
+          <label for="username">Registration Number</label>
+          <input type="text" id="username" placeholder="e.g. 24bce0837" required autocomplete="off">
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-primary">Save Account</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
